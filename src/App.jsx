@@ -1,21 +1,21 @@
 import React from "react";
-import Field from "./Components/Fields";
+import GeneralInfo from "./Components/GeneralInfo";
 
 class App extends React.Component {
   constructor() {
     super();
 
     this.state = {
-      Edit: "Preview",
+      Edit: "Update CV",
     };
   }
 
   handleEdit = () => {
-    if (this.state.Edit === "Preview") {
+    if (this.state.Edit === "Update CV") {
       this.setState({
-        Edit: "Update CV",
+        Edit: "Preview",
       });
-    } else this.setState({ Edit: "Preview" });
+    } else this.setState({ Edit: "Update CV" });
   };
 
   render() {
@@ -24,7 +24,8 @@ class App extends React.Component {
       <>
         <h1>CV Generator</h1>
         <button onClick={this.handleEdit}>{Edit}</button>
-        <Field/>
+
+        <GeneralInfo Edit={Edit}/>
       </>
     );
   }
