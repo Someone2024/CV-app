@@ -6,11 +6,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig(({ command }) => {
   const config = {
     plugins: [react()],
-    base: '/',
-  }
-
-  if (command !== 'serve') {
-    config.base = 'https://github.com/Someone2024/CV-app'
+    base: '/https://github.com/Someone2024/CV-app',
   }
 
   return config
