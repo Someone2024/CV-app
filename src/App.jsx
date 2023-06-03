@@ -35,7 +35,7 @@ class App extends React.Component {
 
         <div className="line"></div>
 
-        <h2>Education Experience</h2>
+        <h2>Educational Experience</h2>
         <Expirience
           first="School"
           second="from"
