@@ -21,7 +21,7 @@ h1{
   font-size: 3em;
 }
 
-.prev, .Edit {
+.prev, .Edit, .add {
   background-color: rgba(216,216,216,0.8);
   border: none;
   color: #6c757d;
@@ -42,4 +42,5 @@ h1{
   width: 40%;
   height: 1px;
   background-color: rgba(128, 128, 128, 0.5);
+  margin-top: 2%;
 }
