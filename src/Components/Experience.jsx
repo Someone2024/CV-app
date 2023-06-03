@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./css/Experience.css"
 
 function Expirience({ first, second, third, fourth }) {
   const [Edit, setEdit] = useState(false);
@@ -15,59 +16,49 @@ function Expirience({ first, second, third, fourth }) {
   };
 
   const handleSubmit = () => {
-    setSubmitState(true)
-  }
+    setSubmitState(true);
+  };
 
   return (
     <div>
       {Edit ? (
-        <>
-          <span>
-            {SubmitState ? (
-              <div>
-                <p>
-                  {first}: {contact.first}
-                </p>
-                <p>
-                  {second}: {contact.second}
-                </p>
-                <p>
-                  {third}: {contact.third}
-                </p>
-                <p>
-                  {fourth}: {contact.fourth}
-                </p>
-                <button onClick={() => setSubmitState(false)}>Add</button>
-              </div>
-            ) : (
-              <div>
-                <span>{first}</span>{" "}
-                <input
-                  onChange={handleChangeFor("first")}
-                  value={contact.first}
-                />
-                <span>{second}</span>{" "}
-                <input
-                  onChange={handleChangeFor("second")}
-                  value={contact.second}
-                />
-                <span>{third}</span>{" "}
-                <input
-                  onChange={handleChangeFor("third")}
-                  value={contact.third}
-                />
-                <span>{fourth}</span>
-                <input
-                  onChange={handleChangeFor("fourth")}
-                  value={contact.fourth}
-                />
-                <button onClick={handleSubmit}>Submit</button>
-              </div>
-            )}
-          </span>
-        </>
+        <div className="experience">
+          {SubmitState ? (
+            <div className="texts">
+              <p>
+                <span>{first}: </span> {contact.first}
+              </p>
+              <p>
+                <span>{second}: </span> {contact.second}
+              </p>
+              <p>
+                <span>{third}: </span> {contact.third}
+              </p>
+              <p>
+                <span>{fourth}: </span> {contact.fourth}
+              </p>
+              <button className="add" onClick={() => setSubmitState(false)}>Add</button>
+            </div>
+          ) : (
+            <div className="inputs">
+              <p>
+                {first}: <input onChange={handleChangeFor("first")} value={contact.first}/>
+              </p>
+              <p>
+                {second}: <input onChange={handleChangeFor("second")} value={contact.second} />
+              </p>
+              <p>
+                {third}: <input onChange={handleChangeFor("third")} value={contact.third} />
+              </p>
+              <p>
+                {fourth}: <input onChange={handleChangeFor("fourth")} value={contact.fourth}/>
+              </p>
+              <button className="add" onClick={handleSubmit}>Submit</button>
+            </div>
+          )}
+        </div>
       ) : (
-        <button onClick={() => setEdit(true)}>Add</button>
+        <button className="add" onClick={() => setEdit(true)}>Add</button>
       )}
     </div>
   );
