@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "./css/Field.css";
 
 function Field({initialText, Edit}) {
     const [input, setInput] = useState(initialText)
@@ -15,16 +15,16 @@ function Field({initialText, Edit}) {
     }
 
     return (
-        <>
+        <div className="Field">
             { buttonState === "Edit" ? 
                 <p>{input}</p> :
                 <input value={input} onChange={handleInput} type="text"/>
             }
             {
-                Edit === "Update CV" && <button onClick={handleBtnState}>{buttonState}</button> 
+                Edit === "Update CV" && <button className="Edit" onClick={handleBtnState}>{buttonState}</button> 
             }
             
-        </>
+        </div>
     )
 }
 
