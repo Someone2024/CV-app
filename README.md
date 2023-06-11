@@ -10,4 +10,4 @@ The CV Generator App is a web application built with ReactJS that allows users t
 
 ## Usage
 - Go to https://musical-cascaron-0fb410.netlify.app/
-- Start Editir!
+- Start Editin!
